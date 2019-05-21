@@ -34,6 +34,7 @@ class Post(models.Model):
 	author = models.ForeignKey(Author, on_delete=models.CASCADE)
 	img = models.ImageField()
 	category = models.ManyToManyField(Category)
+	featured = models.BooleanField()
 
 
 	def __str__(self):
