@@ -9,6 +9,7 @@ django-tinymce4-lite = "*"
 django-crispy-forms = "*"
 gunicorn = "*"
 whitenoise = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
