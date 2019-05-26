@@ -8,6 +8,7 @@ Django = "*"
 django-tinymce4-lite = "*"
 django-crispy-forms = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 

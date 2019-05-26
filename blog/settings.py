@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
     'tinymce',
     'crispy_forms',
+
+    'whitenoise.runserver_nostatic', # new!
 ]
 
 MIDDLEWARE = [
@@ -54,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'blog.urls'
@@ -133,6 +136,8 @@ PROJECT_PATH = os.path.dirname(BASE_DIR)
 
 STATIC_ROOT = os.path.join(PROJECT_PATH, 'static')
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'my_blog/media/')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # tinymce
