@@ -7,6 +7,7 @@ name = "pypi"
 Django = "*"
 django-tinymce4-lite = "*"
 django-crispy-forms = "*"
+gunicorn = "*"
 
 [dev-packages]
 
