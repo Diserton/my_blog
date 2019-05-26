@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+
+{% block content %}
+<div class="col-4 offset-4 mb-5 mt-5">
+<h2>Результаты</h2>
+	{% for post in query %}
+		<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+		<br />
+	{% endfor %}
+</div>
+{% endblock content %}

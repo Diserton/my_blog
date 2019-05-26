@@ -1,0 +1,55 @@
+<aside class="col-lg-4">
+          <!--Поиск-->
+          <div class="widget search">
+            <header>
+              <h3 class="h6">Поиск</h3>
+            </header>
+            <form action="{% url 'search' %}"  class="search-form">
+              <div class="form-group">
+                <input type="search" name="q" placeholder="Что вы ищете?">
+                <button type="submit" class="submit"><i class="icon-search"></i></button>
+              </div>
+            </form>
+          </div>
+
+          <!--Последние-->
+          <div class="widget latest-posts">
+            <header>
+              <h3 class="h6">Последние посты</h3>
+            </header>
+            <div class="blog-posts">
+              
+              {% for post in most_recent %}
+                <a href="{{ post.get_absolute_url }}">
+          
+                  <div class="item d-flex align-items-center">
+                    <div class="image"><img src="{{ post.img.url }}" alt="..." class="img-fluid"></div>
+                    <div class="title"><strong>{{ post.title }}</strong>
+                      <div class="d-flex align-items-center">
+                        <div class="views"><i class="icon-eye"></i>{{ post.view_count }}</div>
+                        <div class="comments"><i class="icon-comment"></i>{{ post.comment_count }}</div>
+                      </div>
+                    </div>
+                  </div>
+                
+                </a>
+              {% endfor %}
+            
+            </div>
+          </div>
+
+          <!--Категории-->
+          <div class="widget categories">
+            <header>
+              <h3 class="h6">Категории</h3>
+            </header>
+            {% for category in category_count %}
+            
+            <div class="item d-flex justify-content-between">
+              {{ category.category__title }}<span>{{ category.category__title__count }}</span>
+            </div>
+
+            {% endfor %}
+          </div>
+          
+        </aside>

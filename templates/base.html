@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="kg">
-
-{% include "head.html" %}
-
+<head>
+	{% include "head.html" %}
+	<title>
+		{% block title %} | Blog &bull; Kanymetov{% endblock %}
+	</title>
+</head>
 <body>
 
 	{% include "header.html" %}
