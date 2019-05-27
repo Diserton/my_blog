@@ -127,8 +127,15 @@ MEDIA_URL = '/media/'
 
 #STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
+<<<<<<< HEAD
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+=======
+PROJECT_PATH = os.path.dirname(BASE_DIR)
+
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'static')
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'my_blog/media/')
+>>>>>>> parent of 1393db3... Heroku config 3
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
