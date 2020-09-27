@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-Django = "==2.2.1"
+Django = "==2.2.13"
 django-tinymce4-lite = "==1.7.5"
 django-crispy-forms = "==1.7.2"
 gunicorn = "==19.9.0"
